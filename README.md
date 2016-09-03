@@ -1,27 +1,42 @@
 # Parallax-CameraGalleryImagePicker-
 
-This repository for?
+**This repository for?**
 
 Parallex CameraGalaryImage Picker
 Version 1.0
 
+**How do I get set up?**
 
-How do I get set up?
+**Gradle Set Up**
 
-Gradle Set Up
+
+```
+#!android
 
 repositories {
     maven {
         url  "http://dl.bintray.com/prashantbhoir13/CameraGalleryImagePicker"
     }
 }
+```
+
+
+
+```
+#!android
 
 dependencies {
     compile 'com.pkb.cameralibrary:cameralibrary:1.01'
 }
 
+```
 
-Add Permission
+
+**Add Permission** 
+
+
+```
+#!andrid
 
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
@@ -29,25 +44,50 @@ Add Permission
 <uses-feature android:name="android.hardware.camera" />
 <uses-feature android:name="android.hardware.camera.autofocus" />
 
+```
 
-Add Activity In Menifest
+
+
+**Add Activity In Menifest** 
+
+
+```
+#!andrid
 
 <activity android:name="com.pkb.cameralibrary.CameraGalleryImageActivity"/>
 
+```
 
-Declare Constant Variable to Code
+
+**Declare Constant Variable to Code** 
+
+
+```
+#!andrid
 
 int ACTIVITY_REQUEST_CODE=1; 
 int ACTIVITY_RESULT_CODE=2;
 
+```
 
-Call To CameraGallery Picker where you want
+
+**Call To CameraGallery Picker where you want**
+
+
+```
+#!andrid
 
 Intent in=new Intent(getApplicationContext(),CameraGalleryImageActivity.class);
 startActivityForResult(in,1);
 
+```
 
-Get Image Uri
+
+**Get Image Uri**
+
+ 
+```
+#!andrid
 
 Override protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     if(requestCode==ACTIVITY_REQUEST_CODE){
@@ -57,3 +97,4 @@ Override protected void onActivityResult(int requestCode, int resultCode, Intent
     }
     super.onActivityResult(requestCode, resultCode, data);
 }
+```
