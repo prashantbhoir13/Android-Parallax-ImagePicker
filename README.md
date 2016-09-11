@@ -10,17 +10,6 @@ Version 1.0
 **Gradle Set Up**
 
 
-```
-#!android
-
-repositories {
-    maven {
-        url  "http://dl.bintray.com/prashantbhoir13/CameraGalleryImagePicker"
-    }
-}
-```
-
-
 
 ```
 #!android
